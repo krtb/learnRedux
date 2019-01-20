@@ -9,14 +9,24 @@ import ReactDOM from 'react-dom'
 
 // functional component, or dummy component because it doesn't handle state
 const App = () => {
-    return <div>
-        Hi, there!
+    // JS will return immediately, 
+    // so need to have something for it to return on that line
+    // this is where the () come in, one next to the return
+    // and the other right after the JSX
+    // otherwise would return null
+    return ( 
+    <div>
+        <label class="label" for="name">
+            Enter Name
+        </label>
+        <input id="name" type="text" />
+        <button style="background-color: blue; color:white;">
+            Submit
+        </button>
     </div>
-}
+    );
+};
 
 
 // take a react component and show it on the screen
-ReactDOM.render(
-    <App />,
-    document.querySelector
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
