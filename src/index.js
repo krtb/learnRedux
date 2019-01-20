@@ -20,7 +20,8 @@ const App = () => {
             Enter Name
         </label>
         <input id="name" type="text" />
-        <button style="background-color: blue; color:white;">
+        {/* first {}, is telling js that we want to refrence a variable, next {} is a JS object */}
+        <button style={{backgroundColor: 'blue', color: 'white',}}>
             Submit
         </button>
     </div>
