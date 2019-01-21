@@ -14,15 +14,17 @@ const App = () => {
     // this is where the () come in, one next to the return
     // and the other right after the JSX
     // otherwise would return null
+    const buttonText = { text: 'click me!' }
     return ( 
     <div>
-        <label class="label" for="name">
+        <label className="label" htmlFor="name">
             Enter Name
         </label>
         <input id="name" type="text" />
         {/* first {}, is telling js that we want to refrence a variable, next {} is a JS object */}
         <button style={{backgroundColor: 'blue', color: 'white',}}>
-            Submit
+        {/* brackets tell you that we are going to declare a variable */}
+            {buttonText.text}
         </button>
     </div>
     );
